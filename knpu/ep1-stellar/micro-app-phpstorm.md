@@ -1,57 +1,55 @@
-# Our Micro-App & PhpStorm Setup
+# Notre Micro-App & Mise en place de PhpStorm
 
-Our mission: to boldly go where no one has gone before... by checking out our app!
-I already opened the new directory in PhpStorm, so fire up your tricorder and let's
-explore!
+Notre mission: aller là où personne n'est jamais allé auparavant... en consultant notre application!
+J'ai déjà ouvert le nouveau dossier dans PhpStorm, alors allumez votre tricordeur(outil dans Star Trek qui permet de détecter, enregistrer et analyser) et allons explorer!
 
-## The public/ Directory
+## Le Dossier public/
 
-There are only three directories you need to think about. First, `public/` is the
-document root: so it will hold *all* publicly accessible files. And... there's
-just one right now! `index.php`. This is the "front controller": a fancy word programmers
-invented that means that this is the file that's executed when you go to *any* URL.
+Il y a seulement trois répertoires auxquels vous devez faire attention. Le premier, `public/` est le
+document root: donc il contiendra *tous* les* fichiers publiquement accessibles. Et... il y a
+un fichier que tu dois connaître maintenant ! `index.php`. C'est le "front controller": un mot fantaisiste que les programmeurs ont inventé qui signifie que c'est le fichier qui est exécuté quand vous allez dans *n'importe quelle* URL.
 
-But,  *really*, you'll almost never need to worry about it. In fact, now that we've
-talked about this directory, *stop* thinking about it!
+Mais, *vraiment*, vous n'aurez presque jamais besoin de vous en soucier. En fait, maintenant que nous avons
+parlé de ce répertoire, arrêtez d'y penser !
 
 ## src/ and config/
 
-Yea, I lied! There are *truly* only *two* directories you need to think about:
-`config/` and `src/`. `config/` holds... um... ya know... config files and `src/`
-is where you'll put *all* your PHP code. It's just that simple.
+Oui, j'ai menti ! Il n'y a *vraiment* que *deux* répertoires auxquels vous devez penser :
+`config/`et `src/`. `config/`' contient.... euh... vous savez... des fichiers de configuration et `src/`'.
+est l'endroit où vous allez mettre *tout* votre code PHP. C'est aussi simple que ça.
 
-Where is Symfony? As usual, when we created the project, Composer read our `composer.json`
-file and downloaded all the third-party libraries - including parts of Symfony -
-into the `vendor/` directory.
+Où est Symfony ? Comme d'habitude, lorsque nous avons créé le projet, Composer a lu notre `composer.json`.
+et téléchargé toutes les librairies tierces - y compris des parties de Symfony -, 
+dans le répertoire `vendor/`.
 
-## Installing the Server
+## Installation du Serveur
 
-Go back to your terminal and find the original tab. Check this out: at the bottom,
-it says that we can get a *better* web server by running `composer require server`.
-I like better stuff! So let's try it! Press `Ctrl`+`C` to stop the existing server,
-and then run:
+Retournez à votre terminal et trouvez l'onglet original. Regardez cela : en bas,
+il dit que nous pouvons obtenir un *meilleur* serveur web en exécutant `composer require server`.
+J'aime mieux ! Alors, essayons ! Appuyez sur `Ctrl`+`C` pour arrêter le serveur existant,
+et entrez :
 
 ```terminal
 composer require server
 ```
 
-If you're familiar with Composer... that package name should look funny! Really,
-wrong! *Normally*, every package name is "something" *slash* "something", like
-`symfony/console`. So... `server` just should *not* work! But it *does*! This is
-part of a cool new system called Flex. More about that soon!
+Si vous êtes familier avec Composer.... ce nom de paquet peut sembler être drôle ! Vraiment,
+mauvais! *Normalement*, chaque nom de paquet est "quelque chose" *slash* "quelque chose", comme
+"symfony/console". Alors.... `server` ne devrait pas fonctionner ! Mais c'est le cas ! Voici
+qui fait partie d'un nouveau système cool appelé Flex. Plus d'informations à ce sujet bientôt !
 
-When this finishes, you can now run:
+Une fois ce processus terminé, vous pouvez maintenant exécuter le programme :
 
 ```terminal
 ./bin/console server:run
 ```
 
-This does *basically* the same thing as before... but the command is shorter. And
-when we refresh, it still works!
+Ceci fait *basiquement* la même chose qu'avant... mais la commande est plus courte. Et
+quand nous rafraichissons, ça marche toujours !
 
-By the way, this `bin/console` command is going to be our new robot side-kick. But
-it's *not* magic: our project has a `bin/` directory with a `console` file inside.
-Windows users should say `php bin/console`... because it's just a PHP file.
+D'ailleurs, cette commande `bin/console` va être notre nouveau robot acolyte. Mais
+c'est *pas* magique : notre projet a un répertoire `bin/` avec un fichier `console` à l'intérieur.
+Les utilisateurs de Windows devraient dire `php bin/console`... parce que c'est juste un fichier PHP.
 
 So, what amazing things can this `bin/console` robot do? Find your open terminal
 tab and just run:
@@ -60,38 +58,37 @@ tab and just run:
 ./bin/console
 ```
 
-Yes! This is a list of *all* of the `bin/console` commands. Some of these are debugging
-*gold*. We'll talk about them along the way!
+Oui ! C'est une liste de *toutes* les commandes `bin/console`. Certains d'entre eux sont du debugging
+*gold*. Nous en parlerons en cours de route !
 
-## PhpStorm Setup
+## Mise en place de PhpStorm
 
-Ok, we are *almost* ready to start coding! But we *need* talk about our spaceship,
-I mean, editor! Look, you can use *whatever* your want... but... I *highly* recommend
-PhpStorm! Seriously, it makes developing in Symfony a *dream*! And no, those nice
-guys & gals at PhpStorm aren't paying me to say this... but they can if they want
-to!
+Ok, nous sommes *presque* prêts à commencer à coder ! Mais nous devons parler de notre vaisseau spatial,
+Je veux dire, éditeur ! Ecoutez, vous pouvez utiliser *tout ce que vous voulez... mais.... Je vous recommande *fortement* 
+PhpStorm ! Sérieusement, cela fait du développement de Symfony un *rêve* ! Et non, ces gentils gars et  filles de PhpStorm ne me paient pas pour dire ça... mais ils le peuvent s'ils le veulent !
 
-Ahem, If you *do* use it... which would be *awesome* for you... there are 2 secrets
-you need to know to trick out your spaceship, ah, *editor*! Clearly I was in hyper-sleep
-too long.
+Hum, si vous *l'utilisez*... ce  serait génial pour vous... il y a 2 secrets
+que vous devez savoir pour customiser votre vaisseau spatial, ah, *éditeur* ! Clairement, j'étais en hyper-sommeil
+trop longtemps.
 
-Go to Preferences, Plugins, then click "Browse Repositories". There are 3
-must-have plugins. Search for "Symfony". First: the "Symfony Plugin". It has over
-2 million downloads for a reason: it will give you *tons* of ridiculous
-auto-completion. You should also download "PHP Annotations" and "PHP Toolbox". I
-already have them installed. If you *don't*, you'll see an "Install" button right
-at the top of the description. Install those and restart PHPStorm.
+Allez dans Preferences, Plugins, puis cliquez sur "Browse Repositories". Il y a 3
+plugins indispensables. Cherchez "Symfony". Premièrement : le "Symfony Plugin". Il a plus de
+2 millions de téléchargements pour une raison : cela vous donnera des *tonnes* de ridicules
+auto-complétion. Vous devriez également télécharger "PHP Annotations" et "PHP Toolbox". Je les ai déjà installés. Si vous ne le *faites pas*, vous verrez un bouton "Install" à droite.
+en haut de la description. Installez-les et redémarrez PHPStorm.
 
-*Then*, come *back* to Preferences, search for "symfony" and find the new "Symfony"
-section. Click the "Enable Plugin" checkbox: you need to enable the Symfony plugin
-for *each* project. It says you need to restart... but I think that's lie. It's space!
-What could go wrong?
+*Ensuite, revenez à Preferences, cherchez "symfony" et trouvez la nouvelle section "Symfony". Cochez la case "Enable Plugin"  : vous devez activer le plugin Symfony.
+pour *chaque* projet. Ça dit que vous devez redémarrer... mais je pense que c'est un mensonge. C'est l'espace !
+Qu'est-ce qui pourrait mal tourner ?
 
-So that's PhpStorm trick #1. For the second, search "Composer" and click on the
-"Composer" section. Click to browse for the "Path to composer.json" and select the
-one in our project. I'm not sure why this isn't automatic... but whatever! Thanks
-to this, PhpStorm will make it easier to create classes in `src/`. You'll see this
-*really* soon.
+C'est donc le tour n°1 de PhpStorm. Pour la seconde, recherchez "Composer" et cliquez sur la section
+ "Composer". Cliquez pour rechercher le "Path to composer.json" et sélectionnez l'option
+Qu'est-ce qui pourrait mal tourner ?
 
-Okay! Our project is set up and it's already working. Let's start building some
-pages and discovering more cool things about new app.
+C'est donc le custom n°1 de PhpStorm. Pour la seconde, recherchez "Composer" et cliquez sur la
+section "Composer". Cliquez pour rechercher le "Path to composer.json" et sélectionnez l'option
+dans notre projet. Je ne sais pas pourquoi ce n'est pas automatique... mais peu importe ! Merci pour cela, PhpStorm facilitera la création de classes dans `src/`. Vous verrez ceci
+*vraiment* bientôt.
+
+D'accord ! Notre projet est en place et il fonctionne déjà. Commençons à créer quelques pages
+et découvrons d'autres choses intéressantes sur la nouvelle application.
