@@ -1,9 +1,9 @@
 # Symfony 4: Let's Launch!
 
-Hey guys! Yes! It's Symfony 4 time! I am *so* excited. Why? Because *nothing*
-makes me happier than sitting down to work inside a framework where coding is actually
-*fun*, and where I can build features fast, but *without* sacrificing quality. Well,
-maybe I'd be *even* happier doing all of that on a beach... with, maybe a cold drink?
+Salut les gars ! Oui! C'est l'heure de Symfony 4! Je suis *si* excité. Pourquoi? Parce que *rien* 
+ne me rend plus heureux que de m'asseoir pour travailler à l'intérieur d'un cadre où le codage est en fait
+*fun*, et où je peux construire des fonctionnalités rapidement, mais *sans* sacrifier la qualité. Eh bien,
+peut-être que je serais encore plus heureux de faire tout ça sur une plage... avec, peut-être, une boisson fraîche ?
 
 Anyways, Symfony 4 completely re-imagined the developer experience: you're going
 to create better features, faster than ever. *And*, Symfony has a *new*, unique
