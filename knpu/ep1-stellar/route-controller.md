@@ -17,34 +17,33 @@ Ouvrez le fichier de routage principal de votre application: `config/routes.yaml
 
 [[[ code('ca7e7b48e4') ]]]
 
-Hey! We already have an example! Uncomment that. Ignore the `index` key for now:
-that's the internal *name* of the route, but it's not important yet.
-
-This says that when someone goes to the homepage - `/` - Symfony should execute
-an `index()` method in a `DefaultController` class. Change this to `ArticleController`
-and the method to `homepage`:
+Hey! Nous avons déjà un exemple! Décommentez cela. Ignorez la clé `index`  pour l'instant:
+c'est le *name* interne de la route, mais ce n'est pas important.
+Cela dit que quand quelqu'un va sur la page d'accueil - `/` - Symfony doit executer
+une méthode `index()` dans une classe `DefaultController`. Changer cela à `ArticleController`
+et la méthode à `homepage`:
 
 [[[ code('f5c6ae0ed2') ]]]
 
-And... yea! That's a route! Hi route! It defines the URL and tells Symfony what
-controller function to execute.
+Et... yea! C'est une route! Bonjour route! Il définit l'URL et dit à Symfony quelle
+fonction du controller doit être executée.
 
-The controller class doesn't exist yet, so let's create it! Right-click on the
-`Controller` directory and go to "New" or press `Cmd`+`N` on a Mac. Choose "PHP Class".
-And, yes! Remember that Composer setup we did in Preferences? Thanks to that, PhpStorm
-correctly guesses the namespace! The force is strong with this one... The namespace
-for every class in `src/` should be `App` plus whatever sub-directory it's in.
+La classe controller n'existe pas encore, alors créons-la ! Cliquez avec le bouton droit de la souris sur 
+le dossier`Controller` et aller à "New" or presser `Cmd`+`N` on a Mac. Choisir "PHP Class".
+Et, oui! Souvenez-vous de l'installation du Composer que nous avons fait dans les Preferences? Grâce à cela, PhpStorm
+devine correctement le namespace! La force est avec lui... Le namespace
+pour chaque class dans `src/` doit être `App` plus dans le sous-répertoire dans lequel il se trouve.
 
-Name this `ArticleController`:
+Nomme cela `ArticleController`:
 
 [[[ code('b80d9887fc') ]]]
 
-And inside, add `public function homepage()`:
+Et à l'intérieur, ajoute `public function homepage()`:
 
 [[[ code('87255115fa') ]]]
 
-*This* function is the controller... and it's *our* place to build the page. To be
-more confusing, it's also called an "action", or "ghob" to its Klingon friends.
+*Cette* fonction est le controller... et c'est *notre* place pour construire la page. Pour être
+plus confus, il est aussi appelé "action", ou "ghob" pour ses amis klingons.
 
 Anyways, we can do *whatever* we want here: make database queries, API calls, take
 soil samples looking for organic materials or render a template. There's just *one*
