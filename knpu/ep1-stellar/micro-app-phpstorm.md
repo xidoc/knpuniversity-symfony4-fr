@@ -24,7 +24,7 @@ dans le répertoire `vendor/`.
 
 ## Installation du Serveur
 
-Retournez à votre terminal et trouvez l'onglet original. Regardez cela : en bas,
+Retournez à votre terminal et trouvez l'onglet d'origine. Regardez cela : en bas,
 il dit que nous pouvons obtenir un *meilleur* serveur web en exécutant `composer require server`.
 J'aime mieux ! Alors, essayons ! Appuyez sur `Ctrl`+`C` pour arrêter le serveur existant,
 et entrez :
@@ -33,7 +33,7 @@ et entrez :
 composer require server
 ```
 
-Si vous êtes familier avec Composer.... ce nom de paquet peut sembler être drôle ! Vraiment,
+Si vous êtes familier avec Composer.... ce nom de paquet peut paraître drôle ! Vraiment,
 mauvais! *Normalement*, chaque nom de paquet est "quelque chose" *slash* "quelque chose", comme
 "symfony/console". Alors.... `server` ne devrait pas fonctionner ! Mais c'est le cas ! Voici
 qui fait partie d'un nouveau système cool appelé Flex. Plus d'informations à ce sujet bientôt !
@@ -48,18 +48,18 @@ Ceci fait *basiquement* la même chose qu'avant... mais la commande est plus cou
 quand nous rafraichissons, ça marche toujours !
 
 D'ailleurs, cette commande `bin/console` va être notre nouveau robot acolyte. Mais
-c'est *pas* magique : notre projet a un répertoire `bin/` avec un fichier `console` à l'intérieur.
+ce n'est *pas* magique : notre projet a un répertoire `bin/` avec un fichier `console` à l'intérieur.
 Les utilisateurs de Windows devraient dire `php bin/console`... parce que c'est juste un fichier PHP.
 
-So, what amazing things can this `bin/console` robot do? Find your open terminal
-tab and just run:
+Alors, quelles sont les choses incroyables que ce robot `bin/console` peut faire? Trouve l'onglet de 
+ton terminal ouvert, et juste, exécute:
 
 ```terminal
 ./bin/console
 ```
 
-Oui ! C'est une liste de *toutes* les commandes `bin/console`. Certains d'entre eux sont du debugging
-*gold*. Nous en parlerons en cours de route !
+Oui ! C'est une liste de *toutes* les commandes `bin/console`. Certaines d'entre elles sont du debugging
+*en or*. Nous en parlerons en cours de route !
 
 ## Mise en place de PhpStorm
 
@@ -73,8 +73,8 @@ trop longtemps.
 
 Allez dans Preferences, Plugins, puis cliquez sur "Browse Repositories". Il y a 3
 plugins indispensables. Cherchez "Symfony". Premièrement : le "Symfony Plugin". Il a plus de
-2 millions de téléchargements pour une raison : cela vous donnera des *tonnes* de ridicules
-auto-complétion. Vous devriez également télécharger "PHP Annotations" et "PHP Toolbox". Je les ai déjà installés. Si vous ne le *faites pas*, vous verrez un bouton "Install" à droite.
+2 millions de téléchargements pour une raison : cela vous donnera des *tonnes* d'auto-complétion
+ridicules. Vous devriez également télécharger "PHP Annotations" et "PHP Toolbox". Je les ai déjà installés. Si vous ne le *faites pas*, vous verrez un bouton "Install" à droite.
 en haut de la description. Installez-les et redémarrez PHPStorm.
 
 *Ensuite, revenez à Preferences, cherchez "symfony" et trouvez la nouvelle section "Symfony". Cochez la case "Enable Plugin"  : vous devez activer le plugin Symfony.
