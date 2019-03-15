@@ -29,56 +29,54 @@ Et... yea! C'est une route! Bonjour route! Il définit l'URL et dit à Symfony q
 fonction du controller doit être executée.
 
 La classe controller n'existe pas encore, alors créons-la ! Cliquez avec le bouton droit de la souris sur 
-le dossier`Controller` et aller à "New" or presser `Cmd`+`N` on a Mac. Choisir "PHP Class".
+le dossier`Controller` et aller à "New" or presser `Cmd`+`N` sur un Mac. Choisir "PHP Class".
 Et, oui! Souvenez-vous de l'installation du Composer que nous avons fait dans les Preferences? Grâce à cela, PhpStorm
 devine correctement le namespace! La force est avec lui... Le namespace
 pour chaque class dans `src/` doit être `App` plus dans le sous-répertoire dans lequel il se trouve.
 
-Nomme cela `ArticleController`:
+Nommez cela `ArticleController`:
 
 [[[ code('b80d9887fc') ]]]
 
-Et à l'intérieur, ajoute `public function homepage()`:
+Et à l'intérieur, ajoutez `public function homepage()`:
 
 [[[ code('87255115fa') ]]]
 
 *Cette* fonction est le controller... et c'est *notre* place pour construire la page. Pour être
-plus confus, il est aussi appelé "action", ou "ghob" pour ses amis klingons.
+plus confus, il est aussi appelé "action", ou "ghob" pour ses amis klingons(Star Trek).
 
-Anyways, we can do *whatever* we want here: make database queries, API calls, take
-soil samples looking for organic materials or render a template. There's just *one*
-rule: a controller must return a Symfony `Response` object.
+Quoi qu'il en soit, nous pouvons faire  *tout ce que nous voulons* ici: faire des requêtes de base de données, des appels API, prendre des échantillons de sol à la recherche de matériaux organiques ou rendre une  template. Il y a juste *une*
+règle: un controller doit retourner un objet Symfony `Response`.
 
-So let's say: `return new Response()`: we want the one from `HttpFoundation`. Give
-it a calm message: `OMG! My first page already! WOOO!`:
+Donc disons: `return new Response()`: nous voulons celui de `HttpFoundation`. Donnez-lui
+un message calme: `OMG! My first page already! WOOO!`:
 
 [[[ code('9b6091d1b8') ]]]
 
-Ahem. Oh, and check this out: when I let PhpStorm auto-complete the `Response` class
-it added this `use` statement to the top of the file automatically:
+Ahem. Oh, et vérifions cela: quand je laisse PhpStorm auto-complété la class `Response`
+il a ajouté cette instruction `use` automatiquement en haut du fichier:
 
 [[[ code('8c7baf2d54') ]]]
 
-You'll see me do that a lot. Good job Storm!
+Vous me verrez beaucoup faire cela. Good job Storm!
 
-Let's try the page! Find your browser. Oh, this "Welcome" page only shows if you
-don't have *any* routes configured. Refresh! Yes! This is *our* page. Our first of
-*many*.
+Allons essayer la page! Retrouvez votre navigateur. Oh, cette page "Welcome"  se montre seulement si tu
+n'as *aucune* routes configurées. Rafraichit! Yes! Cela est *notre* page. Notre première
+*d'une longue série*.
 
-## Annotation Routes
-
-That was *pretty* easy, but it can be easier! Instead of creating our routes in
-YAML, let's use a cool feature called *annotations*. This is an extra feature, so
-we need to install it. Find your open terminal and run:
+## L'annotation des routes
+C'était *plutôt* facile, mais ça peut l'être encore plus! Au lieu de créer notre route dans
+YAML, utilisons une fonction cool appelée *annotations*. C'est une fonctionnalité extra, donc
+nous avons besoin de l'installer. Trouve ton terminal ouvert et exécute:
 
 ```terminal
 composer require annotations
 ```
 
-Interesting... this `annotations` package *actually* installed `sensio/framework-extra-bundle`.
-We're going to talk about how that works *very* soon.
+Intéressant... ce package `annotations` *actuellement* installé `sensio/framework-extra-bundle`.
+Nous allons parlé de comment cela fonctionne *très* bientôt.
 
-Now, about these annotation routes. Comment-out the YAML route:
+Maintenant, à propos de ces annotations de routes. Commentez la route YAML:
 
 [[[ code('aa861906ab') ]]]
 
