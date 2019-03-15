@@ -1,7 +1,7 @@
 # Routes, Controllers, Pages, oh my!
 
 Allons créer notre *première* page! Actuellement, cela est le job *principal* d'un framework:
-te donner un système de *route* et de *controller*. Une route is la configuration qui definit
+te donner un système de *route* et de *controller*. Une route est la configuration qui definit
 l'URL pour une page et un controller. C'est une fonction que *nous* écrivons qui *en fait*
 construit le contenu pour cette page.
 
