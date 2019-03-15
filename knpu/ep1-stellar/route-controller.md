@@ -1,20 +1,19 @@
 # Routes, Controllers, Pages, oh my!
 
-Let's create our *first* page! Actually, this is the *main* job of a framework:
-to give you a *route* and *controller* system. A route is configuration that defines
-the URL for a page and a controller is a function that *we* write that *actually*
-builds the content for that page.
+Allons créer notre *première* page! Actuellement, cela is the job *principal* d'un framework:
+te donner un système de *route* et de *controller*. Une route is la configuration qui definit
+l'URL pour une page et un controller. C'est une fonction que *nous* écrivons qui *en fait*
+construit le contenu pour cette page.
 
-And right now... our app is *really* small! Instead of weighing down your project
-with *every* possible feature you could ever need - after all, we're *not* in
-zero-gravity yet - a Symfony app is basically just a small route-controller system.
-Later, we'll install more features when we need them, like a warp drive! Those always
-come in handy. Adding more features is *actually* going to be pretty awesome. More
-on that later.
+Et tout de suite... notre application est *réellement* petite! Au lieu d'alourdir votre projet
+avec *toutes* les fonctionnalités dont vous avez besoin- après tout, nous ne sommes *pas* en
+apesanteur - une application Symfony est basiquement juste un petit système de route-controller.
+Plus-tard, nous installerons plus de fonctionnalités quand nous en aurons besoin, comme un moteur de distorsion! C'est toujours pratique.
+Ajouter plus de fonctionnalités va être assez impressionnant. On en reparlera plus tard.
 
-## First Route & Controller
+## Première Route & Controller
 
-Open your app's main routing file: `config/routes.yaml`:
+Ouvrez le fichier de routage principal de votre application: `config/routes.yaml`:
 
 [[[ code('ca7e7b48e4') ]]]
 
