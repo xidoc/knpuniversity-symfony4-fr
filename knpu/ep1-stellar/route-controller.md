@@ -80,18 +80,18 @@ Maintenant, à propos de ces annotations de routes. Commentez la route YAML:
 
 [[[ code('aa861906ab') ]]]
 
-Then, in `ArticleController`, above the controller method, add `/**`, hit enter,
-clear this out, and say `@Route()`. You can use either class - but make sure PhpStorm
-adds the `use` statement on top. Then add `"/"`:
+Ensuite, dans `ArticleController`, au-dessus de la méthode du controller, ajoutez `/**`, appuyez sur entrer,
+effacez ceci, et tapez `@Route()`. Vous pouvez utiliser l'une ou l'autre classe- mais soyez sûr que PhpStorm
+ajoute l'instruction `use`  au-dessus. Ensuite ajoute `"/"`:
 
 [[[ code('e9f8d1dc4a') ]]]
 
-That's it! The route is defined *right* above the controller, which is why I *love*
-annotation routes: everything is in one place. But don't trust me, find your browser
-and refresh. It's a traaaap! I mean, it works!
+C'est tout! La route est définie *juste* au-dessus du controller, c'est pourquoi je *préfère*
+les annotations de route: tout est au même endroit. Mais ne me croyez pas, retrouvez votre navigateur
+et rafraîchissé. C'est un pièèèège! Je plaisante, ça fonctionne!
 
 ***TIP
-What *exactly* are annotations? They're PHP comments that are read as configuration.
+Que sont *exactement* les annotations? Il y a des commentaires PHP qui sont lus comme configuration.
 ***
 
 ## Fancy Wildcard Routes
