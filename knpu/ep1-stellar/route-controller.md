@@ -96,46 +96,40 @@ Que sont *exactement* les annotations? Il y a des commentaires PHP qui sont lus 
 
 ## Fancy Wildcard Routes
 
-So what else can we do with routes? Create another public function called `show()`.
-I want this page to eventually display a full article. Give it a route:
+Alors que pouvons-nous faire avec les routes? Créer une autre fonction publique appelée `show()`.
+Je veux que cette page affiche éventuellement un article complet. Donne lui une route:
 `@Route("/news/why-asteroids-taste-like-bacon")`:
 
 [[[ code('cae709ac9c') ]]]
 
-Eventually, this is how we want our URLs to look. This is called a "slug", it's
-a URL version of the title. As usual, return a
+En fin de compte, c'est ainsi que nous voulons que nos URLs apparaissent. Cela est appelé un "slug", c'est une version de l'URL du titre. Comme d'habitude, return a
 `new Response('Future page to show one space article!')`:
 
 [[[ code('7ba5de7f42') ]]]
 
-Perfect! Copy that URL and try it in your browser. It works... but this sucks!
-I don't want to build a route and controller for *every* single article that lives
-in the database. Nope, we need a route that can match `/news/` *anything*. How?
-Use `{slug}`:
+Parfait! Copie cette URL et essaye là dans ton navigateur. Ça fonctionne... mais ça craint!
+Je ne veux pas construire une route et un controller *pour chaque* article qui est en base de données. Nope, nous avons besoin d'une route qui peut matchée  `/news/` *quelque chose*. Comment?
+Utilise `{slug}`:
 
 [[[ code('d572f8cdbc') ]]]
 
-This route *now* matches `/news/` anything: that `{slug}` is a *wildcard*. Oh, and
-the name `slug` could be anything. But whatever you choose now becomes available
-as an *argument* to your "ghob", I mean your action.
+Cette route *maintenant* matche `/news/` quelque chose: que `{slug}` est un *joker*. Oh, et le nom `slug` peut être n'importe quoi. Mais ce que tu choisis maintenant devient maintenant disponible comme un *argument* à ton "ghob", je veux dire ton action.
 
-So let's refactor our success message to say:
+Donc allons redéfinir notre message de succès pour dire:
 
 > Future page to show the article
 
-And then that slug:
+Et puis ce slug:
 
 [[[ code('f97fda18bb') ]]]
 
-Try it! Refresh the same URL. Yes! It matches the route *and* the slug prints!
-Change it to something else: `/why-asteroids-taste-like-tacos`. So delicious!
-Go back to bacon... because... ya know... everyone knows that's what asteroids
-*really* taste like.
+Essaye! Rafraichit la même URL. Yes! Ça matche la route *et* the slug imprimé!
+Change pour autre chose: `/why-asteroids-taste-like-tacos`. C'est si délicieux!
+Retourne au bacon... parce que... tu sais... tout le monde sait que les astéroïdes sont 
+*très* gouteux.
 
-And... yes! We're 3 chapters in and you *now* know the first *half* of Symfony:
-the route & controller system. Sure, you can do fancier things with routes, like
-match regular expressions, HTTP methods or host names - but that will all be pretty
-easy for you now.
+Et... yes! Nous sommes au chapitre 3 et tu connais *maintenant* la première *moitié* de Symfony:
+le système de la route & du controller. Bien sûr, tu peux faire des choses plus intéressantes avec les routes, comme matché les expressions régulières, les méthodes HTTP ou  les noms d'hôtes - mais tout cela sera joliment facile pour toi.
 
-It's time to move on to something *really* important: it's time to learn about Symfony
-Flex and the *recipe* system. Yum!
+C'est l'heure de bouger sur quelque chose de *vraiment* important: c'est l'heure d'apprendre autour de Symfony
+Flexet le système de *recettes*. Yum!
